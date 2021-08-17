@@ -15,4 +15,33 @@ int main(){
 	return 0;
 	
 }
+
+
+
+
+//optimised way 
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+	int n;
+	cin>>n;
+
+	//odd number check
+	if(n&1){
+		cout<<"0"<<endl;
+		return 0;
+	}
+
+	if(n%4!=0){
+		cout<<n/4<<endl;
+	}
+	else{
+		cout<<(n/4)-1<<endl;
+	}
+
+}
+
+
  
