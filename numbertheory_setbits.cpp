@@ -8,3 +8,10 @@ void setbits(int n){
 	}
 	cout<<"number of set bits in "<<temp<<" is "<<ct<<endl;
 }
+
+
+
+
+//count the number of set bits
+	cout<<__builtin_popcount(n)<<endl;
+	cout<<endl;
