@@ -84,6 +84,22 @@ void printBinary(int n){
 	cout<<endl;
 }
 
+//alternative
+int convertToBinary(int n){
+
+	int ans = 0;
+	int p = 1;
+
+	while(n>0){
+		int last_bit = (n&1);
+		ans += p*last_bit;
+
+		p = p*10;
+		n = n>>1;
+	}
+	return ans;
+
+}
 
 
 
@@ -128,6 +144,26 @@ void check(int n){
 	}
   
 }
+
+
+
+
+//Fast Exponentitation
+int fastExpo(int a,int n){
+	int ans = 1;
+
+	while(n>0){
+		int last_bit = (n&1);
+		if(last_bit){
+			ans = ans * a;
+		}
+		a = a*a;
+		n = n>>1;
+
+	}
+	return ans;
+}
+
 
 
 
