@@ -165,6 +165,24 @@ int fastExpo(int a,int n){
 }
 
 
+//xoring of numbers
+#include<bits/stdc++.h>
+using namespace std;
+
+int xoring(vector<int> v)
+{
+   int a=0;
+   for(auto x:v) {
+       a=a^x;
+   }
+   return a;
+   
+    
+}
+
+
+
+
 
 
 
