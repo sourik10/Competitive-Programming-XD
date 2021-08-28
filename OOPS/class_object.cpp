@@ -1,9 +1,44 @@
+/* OOPS 
+
+(Object Oriented Programming)
+Class = Blueprint of an obejct(logical entity)
+Object= Instance of a class(physical entity)
+
+Access Modifier(public/private/protected)
+by default, it is private...
+
+
+Constructor---
+1-Copy constructor
+2-Parameterised constructor
+3-Copy constructor
+
+Setter & Gettter function-----to access private data members and functions outside the class
+
+
+~Destructor
+
+
+Deep vs Shallow copy
+In general, if the variables of an object have been dynamically allocated then it is required to do a Deep Copy in order to create a copy of the object.
+
+
+
+Copy assignment operator 
+
+
+*/
+
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
+
+//class implementation
 class dept_cse{
 
-private:
+private:                //by default data members are private...
 	int roll;
 	char name[10];
 	int marks_eng;
