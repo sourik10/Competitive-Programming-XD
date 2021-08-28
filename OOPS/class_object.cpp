@@ -118,6 +118,12 @@ public:
 
 	}
 
+	
+	//destructor
+	~dept_cse() {
+        cout<<"Destructor "<<endl;
+        
+    }
 
 
 
