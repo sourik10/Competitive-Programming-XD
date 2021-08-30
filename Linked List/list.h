@@ -165,6 +165,43 @@ public:
         }
         return recursive_search(temp->next,key);
     }
+    
+    
+    
+    //revresing a LL iterative
+    Node* reverse_iter(){
+        Node* pp=NULL;
+        Node* cp=head;
+        Node* np;
+
+        while(cp!=NULL){
+            np=cp->next;
+            cp->next=pp;
+
+            //moving the pp,cp,np
+            pp=cp;
+            cp=np;
+        }
+
+        return pp;
+    }
+
+    
+    
+    //reveresing a LL recursive
+    Node* reverse_recursive(Node* head){
+        if(head==NULL  || head->next==NULL){
+            return NULL;
+        }
+
+        Node* n=reverse_recursive(head->next);
+        head->next->next=n;
+
+        head->next=NULL;
+        
+        
+        return n;
+    }
 
    
 /*  **destructor for LinkedList class
