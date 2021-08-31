@@ -19,6 +19,19 @@ void insert_bottom(stack<int> &s,int d){
 	s.push(temp);
 }
 
+//recursively revrse a LIST
+void reverse(stack<int> &s){
+
+	if(s.empty()){
+		return;
+	}
+
+	int t = s.top();
+	s.pop();
+	reverse(s);
+	insertAtBottom(s,t);
+}
+
 
 
 
@@ -35,6 +48,9 @@ int main(){
 	
 
 	insert_bottom(s,10);
+	
+	
+	reverse(s);
 
 
 	while(!s.empty()){
