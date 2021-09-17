@@ -1,4 +1,5 @@
 /*
+SCANLINE ALGORITHM
 An array of size n is given . ar={.......}
 task is to add an key(x) in between its left and right index in (t) no of testcases and finally update the ar array.
 */
@@ -37,4 +38,10 @@ void scanlineAlgorithm(){
 		sum+=prefix[i];  
 		ar[i]+=sum;     //updating original aray
 	}
+	
+	
+	for(int i=0;i<n;i++){
+		cout<<ar[i]<<" ";
+	}
+	
 }
