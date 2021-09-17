@@ -40,7 +40,7 @@ int main(){
         int c,d;
         cin>>c>>d;
 
-        cout<<pf[c][d] - pf[c-1][d] - pf[c][b-1] + pf[a-1][b-1]<<endl;
+        cout<<pf[c][d] - pf[a-1][d] - pf[c][b-1] + pf[a-1][b-1]<<endl;
 
     }
 
