@@ -1,3 +1,8 @@
+/*
+An array of size n is given . ar={.......}
+task is to add an key(x) in between its left and right index in (t) no of testcases and finally update the ar array.
+*/
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -30,6 +35,6 @@ void scanlineAlgorithm(){
 	int sum=0;
 	for(int i=0;i<n;i++){
 		sum+=prefix[i];  
-		a[i]+=sum;     //updating original aray
+		ar[i]+=sum;     //updating original aray
 	}
 }
