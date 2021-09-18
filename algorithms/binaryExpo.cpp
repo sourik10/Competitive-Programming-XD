@@ -10,6 +10,8 @@ Modular Arithmetic Formula
 (a*b) % mod = ((a % mod) * (b % mod)) %mod 
 (a/b) % mod = ((a % mod) * (b^-1 % mod)) %mod 
 
+(a-c-d) applying modular arithmetic---->    (((a-c) % mod)- d) % mod
+
 
 (b/a) %mod  = ( b * a^(mod-2) ) % mod--------------->applying fermat little theorem
 
