@@ -3,39 +3,47 @@
   time complexity O(n*log(n))
  */
 
-#include<bits/stdc++.h>
+#include <iostream>
+#include <limits.h>
 using namespace std;
-//const int N= 1e5+10;
 
+ void sieve(int n)
+{
+	if(n <= 1)
+		return;
 
-void sieveErastothene(int N){
+	//making a Boolean array isPrime[n+1]
+	bool isPrime[n+1];
 
-	bool sieve[N+1];
-	//step1 : mark from index 2 to last index as true(prime)
-	for(int i=2;i*i<=N;i++){
-		sieve[i]=true;
+	//filling array elemnets with True Value
+	//fill(isPrime, isPrime + n + 1, true);
+	for(int i=2;i<=n;i++){
+		isPrime[i]=true;
 	}
 
-	//step2: mark multiple for i as false(non-prime)-->sieve[i]=false
-	for(int i=2;i*i<=N;i++){
-		if(sieve[i]==true){
-			for(int j=i*i;j<=N;j+i){
-				sieve[i]=false;
+
+	for(int i=2; i*i <= n; i++)
+	{
+		if(isPrime[i])
+		{
+			//if its a multiple of i make it false(non-prime)
+			for(int j = i*i; j <= n; j = j+i)
+			{
+				isPrime[j] = false;
 			}
 		}
 	}
 
-	//print only the primes
-	for (int i=2;i<=N;i++)
-        if (sieve[i])
-            cout <<i<< " ";
-
+	//output only prime no
+	for(int i = 2; i<=n; i++)
+	{
+		if(isPrime[i])
+			cout<<i<<" ";
+	}
 }
+int main() {
+    
+    	int n = 19;
 
-int main(){
-
-	int n;
-	cin>>n;
-	sieveErastothene(n);
-	
+	sieve(n);
 }
