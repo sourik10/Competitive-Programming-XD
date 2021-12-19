@@ -11,7 +11,9 @@ int lowerBound(vector<int> A, int Val) {
     int e=A.size()-1;
 
     while(s<=e){
-    	int mid=(s+e)/2;
+	 int mid =s +(e-s)/2; //optimisation
+    	
+	 //int mid=(s+e)/2;
 
     	if(A[mid]==Val) {
 	return A[mid-1];
